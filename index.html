@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MONSTERA</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Allerta"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+      }
+      
+      body{
+        height: 100vh;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        /* background-color: #0E0E0E; */
+        font-family: 'Allerta',sans-serif;
+        font-style: normal;
+      }
+
+      #navbarMonstera {
+        background-color: #F4F3F8;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 15vh;
+      }
+
+      #navFirst {
+        margin: 1px 60px;
+      }
+
+      #navFirst img {
+        height: 30px;
+      }
+
+      #navMid {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 200px;
+        /* border: 1px solid black; */
+      }
+
+      #navMid div {
+        margin: 0 40px;
+        font-size: 16px;        
+        cursor: pointer;
+      }
+
+      #navMid div:first-child {
+        border-bottom: 1px solid #1f1f1f;
+        border-width: 2px;
+      }
+      
+      #navEnd {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 20px;
+        width: 200px;
+        /* border: 1px solid black; */
+      }
+
+      #navEnd>div {
+        margin: 0px 20px;
+        cursor: pointer;
+        /* border: 1px solid black; */
+      }
+
+      #midWhole{
+        background-color: #F4F3F8;
+        position: relative;
+        /* border: 1px solid black; */
+        height: 85vh;
+      }
+
+      #midWholePart1{
+        /* border: 1px solid black; */
+        padding: 10px;
+        width: 60%;
+      }
+
+      #midWholePart11{
+        margin-top: 30px;
+        padding: 30px;
+      }
+
+      #midWholePart11 ul li {
+        list-style-type: disc;
+        font-size: 20px;
+        margin-left: 40px;
+      }
+
+      #monstera{
+        margin-top: 20px;
+        font-size: 80px;
+      }
+
+      #midWholePart12{
+        background-color: #2a7046;
+        width: 250px;
+        color: #ffffff;
+        padding: 10px 10px;
+        position: relative;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-left: 60px;        
+      }
+
+      #midWholePart121 h1{
+          justify-content: center;
+          text-align: center;
+          font-weight: 100;
+      }
+
+      #midWholePart122 img {
+        position: absolute;
+        right: 25px;
+        top: 35%;
+        height: 20px;
+      }
+
+      #midWholePart13 {
+        display: flex;
+        flex-direction: row;        
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 130px;
+        padding: 10px;        
+        margin-top: 30px;
+        margin-left: 60px;
+        font-weight: 100;
+        /* border: 1px solid black; */
+      }
+
+      .midWholePart13Parts{
+        display: flex;
+        flex-direction: row;        
+        justify-content: center;
+        align-items: center;
+        margin-top: 1px;
+        /* padding: 0 10px; */        
+      }
+
+      #feeding{
+        margin-right: 10px;
+        height: 80px;
+        width: 70px;
+      }
+      
+      #light{
+        margin-right: 10px;
+        height: 50px;
+        width: 50px;
+      }
+
+      #care{
+        margin-right: 10px;
+        height: 50px;
+        width: 50px;
+      }
+
+      .text {
+        font-size: 11px;
+      }
+
+      #imgMain {
+        position: absolute;
+        right: 0px;
+        bottom: 0;
+        height: 75vh;
+        width: 30vw;
+      }
+      
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        #navbarMonstera {
+          height: 25vh;
+        }
+
+        #navFirst {
+          margin: 10px 20px;
+          margin-top: 20px;
+        }
+
+        #navFirst img {
+          height: 25px;
+        }
+
+        #navMid {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 100px;
+          margin-top: 5px;
+          height: 150px;
+          /* border: 1px solid black; */
+        }
+
+        #navMid div {
+          margin: 0 40px;
+          font-size: 16px;        
+          cursor: pointer;
+        }
+
+        #midWholePart11{
+          margin-top: 1px;
+          padding: 20px;
+        }
+
+        #midWholePart11 ul li {
+          list-style-type: disc;
+          font-size: 14px;
+          margin-left: 10px;
+        }
+
+        #monstera{
+          margin-top: 1px;
+          font-size: 30px;
+        }
+
+        #midWholePart12{
+          background-color: #2a7046;
+          width: 200px;
+          color: #ffffff;
+          padding: 1px 1px;
+          position: relative;
+          border-radius: 50px;
+          cursor: pointer;
+          margin-left: 60px;        
+        }
+
+        #midWholePart12{
+          background-color: #2a7046;
+          width: 230px;
+          color: #ffffff;
+          padding: 5px 1px;
+          position: relative;
+          border-radius: 50px;
+          cursor: pointer;
+          margin-left: 40px;        
+        }
+
+        #midWholePart121 h1{
+            justify-content: center;
+            text-align: center;
+            font-weight: 100;
+        }
+
+        #midWholePart122 img {
+          position: absolute;
+          right: 15px;
+          top: 33%;
+          height: 20px;
+        }
+
+        #midWholePart13 {
+          display: flex;
+          flex-direction: row;        
+          justify-content: space-between;
+          align-items: center;
+          width: 45%;
+          height: 60px;
+          padding: 10px;        
+          margin-top: 90px;
+          margin-left: 10px;
+          font-weight: 100;
+          /* border: 1px solid black; */
+        }
+
+        .midWholePart13Parts{
+          display: flex;
+          flex-direction: column;        
+          justify-content:center;
+          align-items: center;
+          margin-top: 15px;
+          /* padding: 0 10px; */        
+        }
+
+        #feeding{
+          margin-left: -50px;
+          height: 50px;
+          width: 40px;
+        }
+        
+        #light{
+          margin-left: -20px;
+          height: 30px;
+          width: 30px;
+        }
+
+        #care{
+          margin-left: -20px;
+          height: 30px;
+          width: 30px;
+        }
+
+      }
+
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        #navbarMonstera {
+          height: 25vh;
+        }
+
+        #navFirst {
+          margin: 20px 20px;
+          margin-top: 20px;
+        }
+
+        #navFirst img {
+          height: 25px;
+        }
+
+        #navMid {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 150px;
+          margin-top: 5px;
+          height: 150px;
+          /* border: 1px solid black; */
+        }
+
+        #navMid div {
+          margin: 0 40px;
+          font-size: 16px;        
+          cursor: pointer;
+        }
+
+        #midWholePart11{
+          margin-top: 1px;
+          padding: 20px;
+        }
+
+        #midWholePart11 ul li {
+          list-style-type: disc;
+          font-size: 14px;
+          margin-left: 10px;
+        }
+
+        #monstera{
+          margin-top: 1px;
+          font-size: 50px;
+        }
+
+        #midWholePart12{
+          background-color: #2a7046;
+          width: 200px;
+          color: #ffffff;
+          padding: 1px 1px;
+          position: relative;
+          border-radius: 50px;
+          cursor: pointer;
+          margin-left: 60px;        
+        }
+
+        #midWholePart12{
+          background-color: #2a7046;
+          width: 230px;
+          color: #ffffff;
+          padding: 5px 1px;
+          position: relative;
+          border-radius: 50px;
+          cursor: pointer;
+          margin-left: 40px;        
+        }
+
+        #midWholePart121 h1{
+            justify-content: center;
+            text-align: center;
+            font-weight: 100;
+        }
+
+        #midWholePart122 img {
+          position: absolute;
+          right: 15px;
+          top: 33%;
+          height: 20px;
+        }
+
+        #midWholePart13 {
+          display: flex;
+          flex-direction: row;        
+          justify-content: space-between;
+          align-items: center;
+          width: 99%;
+          height: 60px;
+          padding: 10px;        
+          margin-top: 90px;
+          margin-left: 10px;
+          font-weight: 100;
+          /* border: 1px solid black; */
+        }
+
+        .midWholePart13Parts{
+          display: flex;
+          flex-direction: column;        
+          justify-content:center;
+          align-items: center;
+          margin-top: 15px;
+          /* padding: 0 10px; */        
+        }
+
+        #feeding{
+          margin-left: -50px;
+          height: 50px;
+          width: 40px;
+        }
+        
+        #light{
+          margin-left: -20px;
+          height: 30px;
+          width: 30px;
+        }
+
+        #care{
+          margin-left: -20px;
+          height: 30px;
+          width: 30px;
+        }
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        #navbarMonstera {
+          height: 15vh;
+        }
+
+        #navFirst {
+          margin: 20px 20px;
+          margin-top: 20px;
+        }
+
+        #navFirst img {
+          height: 25px;
+        }
+
+        #navMid {
+          display: flex;
+          flex-direction: row;
+          position: absolute;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 100px;
+          margin-top: 1px;
+          height: 150px;
+          /* border: 1px solid black; */
+        }
+
+        #navMid div {
+          margin: 0 20px;
+          font-size: 16px;        
+          cursor: pointer;
+        }
+
+        #midWholePart11{
+          margin-top: 1px;
+          padding: 20px;
+        }
+
+        #midWholePart11 ul li {
+          list-style-type: disc;
+          font-size: 14px;
+          margin-left: 10px;
+        }
+
+        #monstera{
+          margin-top: 30px;
+          font-size: 70px;
+        }
+
+        #midWholePart12{
+          background-color: #2a7046;
+          width: 200px;
+          color: #ffffff;
+          padding: 1px 1px;
+          position: relative;
+          border-radius: 50px;
+          cursor: pointer;
+        }
+
+        #midWholePart12{
+          background-color: #2a7046;
+          width: 230px;
+          color: #ffffff;
+          padding: 10px 10px;
+          position: relative;
+          border-radius: 50px;
+          cursor: pointer;
+          margin-left: 40px;        
+        }
+
+        #midWholePart121 h1{
+            justify-content: center;
+            text-align: center;
+            font-weight: 100;
+        }
+
+        #midWholePart122 img {
+          position: absolute;
+          right: 15px;
+          top: 35%;
+          height: 20px;
+        }
+
+        #midWholePart13 {
+          display: flex;
+          flex-direction: row;        
+          justify-content: space-between;
+          align-items: center;
+          width: 99%;
+          height: 60px;
+          padding: 10px;        
+          margin-top: 60px;
+          margin-left: 10px;
+          font-weight: 100;
+          /* border: 1px solid black; */
+        }
+
+        .midWholePart13Parts{
+          display: flex;
+          flex-direction: row;        
+          justify-content:center;
+          align-items: center;
+          margin-top: 15px;
+          /* padding: 0 10px; */        
+        }
+
+        #feeding{
+          margin-left: 10px;
+          height: 50px;
+          width: 40px;
+        }
+        
+        #light{
+          margin-left: 10px;
+          height: 30px;
+          width: 30px;
+        }
+
+        #care{
+          margin-left: 10px;
+          height: 30px;
+          width: 30px;
+        }
+      } 
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        
+        #navMid div {
+          margin: 0 40px;
+          font-size: 16px;        
+          cursor: pointer;
+        }
+      } 
+
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+        #navMid div {
+          margin: 0 50px;
+          font-size: 16px;        
+          cursor: pointer;
+        }  
+      }
+
+      /* Extra large devices (large laptops and desktops, 1450px and up) */
+      @media only screen and (min-width: 1450px) {
+        #navbarMonstera {
+          background-color: #F4F3F8;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          height: 15vh;
+        }
+
+        #navFirst {
+          margin: 1px 60px;
+        }
+
+        #navFirst img {
+          height: 30px;
+        }
+
+        #navMid {
+          display: flex;
+          flex-direction: row;
+          position: absolute;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 200px;
+          /* border: 1px solid black; */
+        }
+
+        #navMid div {
+          margin: 0 40px;
+          font-size: 16px;        
+          cursor: pointer;
+        }
+
+        #navMid div:first-child {
+          border-bottom: 1px solid #1f1f1f;
+          border-width: 2px;
+        }
+        
+        #navEnd {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          margin-right: 20px;
+          width: 200px;
+          /* border: 1px solid black; */
+        }
+
+        #navEnd>div {
+          margin: 0px 20px;
+          cursor: pointer;
+          /* border: 1px solid black; */
+        }
+
+        #midWhole{
+          background-color: #F4F3F8;
+          position: relative;
+          /* border: 1px solid black; */
+          height: 85vh;
+        }
+
+        #midWholePart1{
+          /* border: 1px solid black; */
+          padding: 10px;
+          width: 60%;
+        }
+
+        #midWholePart11{
+          margin-top: 30px;
+          padding: 30px;
+        }
+
+        #midWholePart11 ul li {
+          list-style-type: disc;
+          font-size: 20px;
+          margin-left: 40px;
+        }
+
+        #monstera{
+          margin-top: 20px;
+          font-size: 80px;
+        }
+
+        #midWholePart12{
+          background-color: #2a7046;
+          width: 250px;
+          color: #ffffff;
+          padding: 10px 10px;
+          position: relative;
+          border-radius: 50px;
+          cursor: pointer;
+          margin-left: 60px;        
+        }
+
+        #midWholePart121 h1{
+            justify-content: center;
+            text-align: center;
+            font-weight: 100;
+        }
+
+        #midWholePart122 img {
+          position: absolute;
+          right: 25px;
+          top: 35%;
+          height: 20px;
+        }
+
+        #midWholePart13 {
+          display: flex;
+          flex-direction: row;        
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          height: 130px;
+          padding: 10px;        
+          margin-top: 30px;
+          margin-left: 60px;
+          font-weight: 100;
+          /* border: 1px solid black; */
+        }
+
+        .midWholePart13Parts{
+          display: flex;
+          flex-direction: row;        
+          justify-content: center;
+          align-items: center;
+          margin-top: 1px;
+          /* padding: 0 10px; */        
+        }
+
+        #feeding{
+          margin-right: 10px;
+          height: 80px;
+          width: 70px;
+        }
+        
+        #light{
+          margin-right: 10px;
+          height: 50px;
+          width: 50px;
+        }
+
+        #care{
+          margin-right: 10px;
+          height: 50px;
+          width: 50px;
+        }
+
+        .text {
+          font-size: 11px;
+        }
+
+        #imgMain {
+          position: absolute;
+          right: 0px;
+          bottom: 0;
+          height: 75vh;
+          width: 30vw;
+        }
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <nav id="navbarMonstera">
+      <div id="navFirst">
+        <img src="./photos/Logo.svg" />
+      </div>
+
+      <div id="navMid">
+        <div>
+          <h4>Home</h4>
+        </div>
+        <div><h4>Collection</h4></div>
+        <div>
+          <h4>Shop</h4>
+        </div>
+        <div>
+          <h4>About</h4>
+        </div>
+        <div>
+          <h4>Contact</h4>
+        </div>
+      </div>
+
+      <div id="navEnd">
+        <div>
+          <img src="/photos/cart.svg" />
+        </div>
+        <div>
+          <img src="./photos/user.svg" />
+        </div>
+        <div>
+          <img src="./photos/search.svg" />
+        </div>
+      </div>
+    </nav>
+
+    <div id="midWhole">
+      <div id="midWholePart1">
+        <div id="midWholePart11">
+          <div>
+            <ul>
+              <li><h1 id="monstera">MONSTERA</h1></li>
+              <li></li>
+              <li>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Debitis ab veniam adipisci corrupti unde, nostrum saepe.
+              </li>
+              <li>
+                Quibusdam perferendis, dolore est odit iste cum quas quidem
+                officiis laudantium hic maxime recusandae?
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="midWholePart12">
+          <div id="midWholePart121">
+            <div>
+              <h1>DISCOVER</h1>
+            </div>
+            <div id="midWholePart122">
+              <img src="./photos/greaterThan.svg" />
+            </div>
+          </div>
+        </div>
+        <div id="midWholePart13">
+          <div class="midWholePart13Parts">
+            <div>
+              <img id="feeding" src="./photos/water plant.png" />
+            </div>
+            <div>
+              <h4>Feeding</h4>
+              <p class="text">
+                Lorem ipsum dolor sit amet consecteturadipisicing elit
+              </p>
+            </div>
+          </div>
+          <div class="midWholePart13Parts">
+            <div>
+              <img id="light" src="./photos/light.svg" alt="" />
+            </div>
+            <div>
+              <h4>Light</h4>
+              <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit
+              </p>
+            </div>
+          </div>
+          <div class="midWholePart13Parts">
+            <div>
+              <img id="care" src="./photos/plough.svg" />
+            </div>
+            <div>
+              <h4>Care</h4>
+              <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img id="imgMain" src="./photos/6_folwer_cut.png" />
+      </div>
+    </div>
+  </body>
+</html>
